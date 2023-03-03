@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>input 테스트</title>
+</head>
+<body>
+    <foim>
+        <p><input type="button" value="회원가입" name="joinbtn"></p>
+        <p>이메일: <input type="text" value="" placeholder="********@gamil.com" name="text_test"></p>                       <!-- value는 쓰는 text -->
+        <p>비밀번호: <input type="password" name="password_test"></p>
+        <p>
+            <input type="radio" name="radio_test" id="hite">
+            <label for="hite">하이트</label>
+
+            <input type="radio" name="radio_test" id="cass">
+            <label for="cass">카스</label>
+
+            <input type="radio" name="radio_test" id="tera">
+            <label for="tera">테라</label>
+        </p>                                <!-- radio, checkbox는 label 같이씀 for는 id랑 연결 동일하게 표시해야함 -->
+        <p>
+            <input type="checkbox" name="checkbox_test" id="cham">
+            <label for="cham">참이슬</label>
+
+            <input type="checkbox" name="checkbox_test" id="first" checked>
+            <label for="first">처음처럼</label>
+
+            <input type="checkbox" name="checkbox_test" id="new">
+            <label for="new">새로</label>
+        </p>
+        <p><input type="hidden" name="hidden_test" value="보이지 않는 값"></p>
+        <p><input type="submit" value="제출!" name="submitbtn"></p>                                     <!-- button submit 차이점 -->
+        <p><input type="text" maxlength="10" placeholder="10자리만 입력하세요" name="size_test"></p>
+        <p><input type="button" value="계산" onclick="alert('10000원 입니다.')"></p>                    <!-- onclick은 클릭 이벤트를 만들어주는 속성 -->
+        <p><button onclick="alert('안녕하세요?')">눌러보세요!</button></p>
+        <p><input type="file" accept="image/jpeg, image/gif"></p>
+        
+        <p><textarea name="feedback" rows="2" cols="25" readonly>테스트입니다</textarea></p>
+    </foim>
+</body>
+</html>

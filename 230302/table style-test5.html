@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 테스트5</title>
+    <style>
+        /* #list {
+            font-family: "Trebuchet MS", sans-serif;
+            width: 100%;
+        }
+        #list td, #list th {
+            border: 1px dotted grey ;
+        } */
+        #list th {
+            color: white;
+            background-color: blue;
+        }
+        /* #list tr.alt td {
+            background-color: yellow;
+        } */
+        /* #list table:nth-child(odd) {
+        } */
+        tr:nth-child(even) {/* 자식이 되는 것인데 tbody가 있어서 table로하면 안됨 */
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tbody>
+            <tr>
+                <th>이름</th>
+                <th>이메일</th>
+            </tr>
+            <tr>
+                <td>김철수</td>
+                <td>chul@gmail.com</td>
+            </tr>
+            <tr>
+                <td>김영희</td>
+                <td>young@gmail.com</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>hong@gmail.com</td>
+            </tr>
+            <tr>
+                <td>김수진</td>
+                <td>sujin@gmail.com</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

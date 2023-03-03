@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼 연습4</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="a-test 3.html">
+        <fieldset style="width: 600px; height: auto;">
+            <legend>필수 입력 사항</legend>
+            <b>ID</b> <input type="text" name="ID" placeholder="아이디 10글자 이내" style="width: 200px;"> <input type="button" value="중복 확인" id="submitbtn">
+            <br>
+            <b>비밀번호</b> <input type="password" name="pwd" placeholder="영문,숫자,특수문자 포함 8자 이상" style="width: 250px;">
+            <br>
+            <b>비밀번호 확인</b> <input type="password" name="pwd chk" style="width: 250px;">
+            <br>
+            <b>Email</b> <input type="text" name="email" style="width: 200px;">@
+            <select name="mail">
+                <option>직접입력</option>
+                <option value="naver">naver.com</option>
+                <option value="google">gmail.com</option>
+            </select>
+        </fieldset>
+        <fieldset style="width: 600px; height: auto;">
+            <legend>추가 정보</legend>
+            <p>
+                프로필사진 <input type="file" accept="image/jpeg, image/gif" name="file">
+            </p>
+            <p> 성별 :
+                <input type="radio" name="gender" id="male">
+                <label for="male">남자</label>
+                <input type="radio" name="gender" id="female">
+                <label for="female">여자</label>
+            </p>
+            <p>
+                생년월일 : <input type="date" name="date">
+            </p>
+            <P>
+                취미<br>
+                <input type="checkbox" name="ha" id="ba">
+                <label for="ba">야구</label>
+                <input type="checkbox" name="ha" id="bak">
+                <label for="bak">농구</label>
+                <input type="checkbox" name="ha" id="sa">
+                <label for="sa">축구</label>
+                <br>
+                <input type="checkbox" name="ha" id="st">
+                <label for="st">공부</label>
+                <input type="checkbox" name="ha" id="mu">
+                <label for="mu">음악감상</label>
+                <br>
+                <input type="checkbox" name="ha" id="gi">
+                <label for="gi">기타</label>
+                <input type="text">
+            </P>
+                자기소개<br>
+                <textarea rows="10" cols="70"></textarea>
+        </fieldset>
+    <p>
+        <input type="submit" value="회원가입" id="submitbtn">
+        <input type="reset" value="다시입력">
+    </p>
+    </form>
+    <button onclick="javascript: history.go(-1)">이전으로</button>
+</body>
+</html>

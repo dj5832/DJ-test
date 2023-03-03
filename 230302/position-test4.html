@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>포지션 테스트4</title>
+    <style>
+        div {
+            background-color: antiquewhite;
+            padding: 2px;
+            width: 300px;
+            height: 100px;
+        }
+        p {
+            background-color: black;
+            color: aqua;
+        }
+        .other_p {
+            position: relative;
+            top: 300px;
+            width: 300px;
+        }
+        #inner_p1 {
+            position: fixed;
+            /* top: 100px; */
+        }
+        #inner_p2 {
+            position: absolute;
+            /* top: 100px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <p id="inner_p2">block absolute</p>
+    </div>
+    <div class="d1">
+        <p id="inner_p1">block fixed</p>
+    </div>
+    <p class="other_p">block #3</p>
+    <p class="other_p">block #4</p>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>layout 연습</title>
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            margin: 0px;
+        }
+        .d {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* text-align: center; */
+            height: 15%;
+            width: 100%;
+            background-color: plum;
+        }
+        .d1 {
+            background-color: orange;
+            width: 20%;
+            height: 80%;
+            float: left;
+        }
+        .d2 {
+            width: 80%;
+            height: 80%;
+            background-color: yellowgreen;
+            float: right;
+        }
+        .d3 {
+            width: 100%;
+            height: 5%;
+            background-color: rgb(175, 114, 233);
+            text-align: center;
+            clear: both;
+        }
+        .img {
+            display: flex;
+            justify-content: center;
+        }
+        #t1 {
+            text-align: center;
+        }
+        #li {
+            margin: 20px 0px 0px 20px;
+        }
+        #li1 {
+            margin: 0px 0px 0px 20px;
+        }
+        #box1 {
+            width: 92%;
+            height: 45%;
+            /* border: 3px solid black; */
+            /* border-style: dotted; */
+            /* border-radius: 10px; */
+        }       
+        .font {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="d">
+        <div>
+            <h1 style="margin: 0;">My Blog Page</h1>
+        </div>
+    </div>
+    <div class="d1">
+        <div>
+            <h4>Links</h4>
+            <ul>
+                <li>w3school</li>
+                <li>Naver</li>
+                <li>google</li>
+            </ul>
+        </div>
+        <div class="img">
+            <img src="../img/images.jfif" width="50%" height="100%">
+        </div>
+        <p id="t1">뚱이</p>
+    </div>
+    <div class="d2">
+        <div id="box1">
+            <h1 class="font">나는</h1>
+            <P class="font">즐겁다</P>
+        </div>
+        <div id="box1">
+            <h1 class="font">나는</h1>
+            <P class="font">행복하다</P>
+        </div>
+    </div>
+    <div class="d3">
+        Copyright (e)2019 Hong
+    </div>
+</body>
+</html>

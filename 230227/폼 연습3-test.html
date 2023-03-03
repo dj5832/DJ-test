@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼 연습2</title>
+</head>
+<body>
+    <form>
+        고객 명 : <input type="text" name="name"><br>
+        전화번호 : <input type="text" name="number"><br>
+        E-mail : <input type="text" name="Mail"><br>
+        <fieldset style="width: 300px; height: auto;">
+            <legend>피자 사이즈</legend>
+                <p>
+                    <input type="radio" name="size" id="S">
+                    <label for="S">Small</label>
+                </p>
+                <p>
+                    <input type="radio" name="size" id="M">
+                    <label for="M">Medium</label>
+                </p>
+                <p>
+                    <input type="radio" name="size" id="L">
+                    <label for="L">Large</label>
+                </p>
+        </fieldset>
+        <fieldset>
+            <legend>토핑 선택</legend>
+                <p>
+                    <input type="checkbox" name="topping" id="B">
+                    <label for="B">베이컨</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="topping" id="C">
+                    <label for="C">치즈</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="topping" id="U">
+                    <label for="U">어니언</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="topping" id="M">
+                    <label for="M">버섯</label>
+                </p>
+        </fieldset>
+        <p>
+        희망배송시간
+        <input type="time" name="time">
+        </p>
+        <p>배송시 요청사항 : <textarea rows="2" cols="30"></textarea></p>
+        <input type="button" value="주문하기" name="order">
+        <input type="reset" value="다시 선택하기">
+    </form>
+</body>
+</html>
