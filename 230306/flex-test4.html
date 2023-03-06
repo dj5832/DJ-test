@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>flex 테스트4</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0px;
+        }
+        ul {
+            display: flex;
+            padding: 0px;
+            list-style-type: none;
+            height: 300px;
+            border: 5px solid red;
+
+            flex-wrap: wrap;
+
+            /* align-items: flex-start; */
+            /* align-items: center; */
+            /* align-items: flex-end; */
+
+            /* justify-content: center; */
+
+            /* align-content: flex-start; */
+            align-content: center
+        }
+
+        /* li:nth-child(3) {
+            align-self: flex-start;
+        } */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>거북이</li>
+        <li>호랑이</li>
+        <li>다람쥐</li>
+        <li>청설모</li>
+        <li>고라니</li>
+    </ul>
+</body>
+</html>
