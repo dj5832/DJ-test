@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>홈페이지</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }    
+    html, body {            /* S1 + S2  s1부모 > s2의 바로앞의 형제만 ,  s1 ~ s2 s2의형제를 선택 */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+    .bigcontainer {
+        display: grid;
+        height: 100%;
+        grid-template-columns: 1% 98% 1%;
+        justify-content: center;
+    }
+    .container {
+        display: grid;
+        height: 100%;
+
+        gap: 10px;
+        grid-template-rows: 10% 7% 70% 7%;
+    }
+    .header {
+        margin-top: 10px;
+        background-color: burlywood;
+        border-radius: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header a {
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        display: flex;
+        align-items: center;
+    }
+    .header h1 {
+        margin: 0;
+        display: inline-flex;
+    }
+    .nav {
+        display: grid;
+        align-items: center;
+        width: 100%;
+        border-top: 2px solid red;
+        border-bottom: 2px solid red;
+    }
+    .nav ul {
+        margin: 0;
+        display: flex;
+        justify-content: space-evenly;
+        list-style-type: none;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+    }
+    .nav a {
+        text-decoration: none;
+        color: black;
+    }
+    .nav a:hover {
+        text-decoration: underline;
+    }
+    .content {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 14% 70% 14%;
+        justify-content: center;
+    }
+    .c1 {
+        display: grid;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 5% 60% 20%;
+        background-color: rgb(248, 221, 225);
+        border-radius: 35px;
+    }
+    .c1 ul {
+        margin: 0;
+        justify-content: center;
+        padding: 0;
+        list-style: none;
+        
+    }
+    .c1 li {
+        color: white;
+        padding-left: 10px;
+
+    }
+
+    .c1 a {
+        background-color: rgb(255, 184, 196);
+        display: grid;
+        grid-template-rows: repeat(1, 40px);
+        text-decoration: none;
+        color: black;
+        align-items: center;
+        border-bottom: 1px solid rgb(196, 195, 195);
+    }
+    .c2 {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .img {
+        display: grid;
+        grid-template-rows: 40% 60%;
+        justify-items: center;
+        text-decoration: none;
+        color: black;
+    }
+    .c2 a:hover {
+        box-shadow: 0 4px 10px 0 rgb(163, 163, 163), 0 6px 5px 0 rgb(163, 163, 163);
+    }
+    .c3 {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: repeat(2, 1fr);
+        background-color: rgb(248, 221, 225);
+        border-radius: 35px;
+
+    }
+    .cc3 {
+        display: grid;
+        align-content: space-evenly;
+    }
+    .fotter {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        border-radius: 35px;
+        background-color: rgb(255, 171, 255);
+    }
+    </style>
+</head>
+<body>
+    <div class="bigcontainer">
+        <div></div>
+        <div class="container">
+            <div class="header">
+                <a href="#">
+                    <img src="../img/옷 메인.jfif" style="width: 15%; height: 80%;">
+                    <h1>Web Shopping</h1>
+                </a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a href="#"><li>home</li></a>
+                    <a href="#"><li>Shopping about</li></a>
+                    <a href="#"><li>news</li></a>
+                    <a href="#"><li>my account</li></a>
+                    <a href="#"><li>contacts</li></a>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="c1">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <ul>
+                        <h2 style="margin: 0 0 10px 0;">카테고리</h2>
+                        <a href="./computer.html" target="_blank"><li>컴퓨터</li></a>
+                        <a href="#"><li>의류</li></a>
+                        <a href="./music.html" target="_blank"><li>음악</li></a>
+                        <a href="#"><li>영화</li></a>
+                        <a href="#"><li>스포츠/레저</li></a>
+                        <a href="#"><li>가구/인테리어</li></a>
+                        <a href="#"><li>식품</li></a>
+                    </ul>
+                </div>
+                <div class="c2">
+                    <a class="img" href="#">
+                        <div>
+                            <img src="../img/컴퓨터 1.png">
+                        </div>
+                        <div style="padding-left: 10px;">
+                            <p>초이스컴 컴퓨터 게이밍 조립컴퓨터 올인원 풀세트
+                            모니터포함 고사양PC 오버워치 피파, 기본형, 풀세트
+                            </p>
+                            <br>
+                            <input type="button" value="쇼핑카트에 추가하기" name="shopping add">
+                        </div>
+                    </a>
+                    <a class="img" href="#">
+                        <div>
+                            <img src="../img/컴퓨터 1.png">
+                        </div>
+                        <div style="padding-left: 10px;">
+                            <p>초이스컴 컴퓨터 게이밍 조립컴퓨터 올인원 풀세트
+                            모니터포함 고사양PC 오버워치 피파, 기본형, 풀세트
+                            </p>
+                            <br>
+                            <input type="button" value="쇼핑카트에 추가하기" name="shopping add">
+                        </div>
+                    </a>
+                    <a class="img" href="#">
+                        <div>
+                            <img src="../img/컴퓨터 1.png">
+                        </div>
+                        <div style="padding-left: 10px;">
+                            <p>초이스컴 컴퓨터 게이밍 조립컴퓨터 올인원 풀세트
+                            모니터포함 고사양PC 오버워치 피파, 기본형, 풀세트
+                            </p>
+                            <br>
+                            <input type="button" value="쇼핑카트에 추가하기" name="shopping add">
+                        </div>
+                    </a>
+                    <a class="img" href="#">
+                        <div>
+                            <img src="../img/컴퓨터 1.png">
+                        </div>
+                        <div style="padding-left: 10px;">
+                            <p>초이스컴 컴퓨터 게이밍 조립컴퓨터 올인원 풀세트
+                            모니터포함 고사양PC 오버워치 피파, 기본형, 풀세트
+                            </p>
+                            <br>
+                            <input type="button" value="쇼핑카트에 추가하기" name="shopping add">
+                        </div>
+                    </a>
+
+                </div>
+                <div class="c3">
+                    <div></div>
+                    <div class="cc3">
+                        <h2>Shopping Cart</h2>
+                        <p>
+                            현재 쇼핑카트에 물품이 없습니다.
+                        </p>
+                        <a href="#">쇼핑카트 보기</a>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div>
+                        <form>
+                            <h2>Log In</h2>
+                            <p>
+                                아이디
+                            </p>
+                            <input type="text" name="name" style="width: 100%;">
+                            <p>
+                                패스워드
+                            </p>
+                            <input type="password" name="password" style="width: 100%;">
+                            <br><br>
+                            <input type="submit" value="로그인" name="login">
+                            <input type="reset">
+                            <br><br>
+                            <a href="./회원가입.html" target="_blank">회원가입</a>
+                            <a href="#">비밀번호 분실</a>
+                        </form>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="fotter">
+                <p><b>2023.03.07 DW아카데미 042-123-4567</b></p>
+            </div>
+        </div>
+        <div></div>
+    </div>
+</body>
+</html>
