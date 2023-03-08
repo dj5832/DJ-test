@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>그리드 네이버</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        p {
+            display: grid;
+            align-items: center;
+            margin: 0;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        .h100 {
+            height: 100%;
+        }
+        .h50 {
+            height: 50%;
+        }
+        .container {
+            position: absolute;
+            display: grid;
+            height: 100%;
+            width: 100%;
+            grid-template-rows: 15% 5% 75% 5%;
+        }
+        .header {
+            display: grid;
+            grid-template-columns: 400px 700px 300px;
+            justify-content: center;
+        }
+        .header .img {
+            display: grid;
+            align-content: end;
+        }
+        .header .middle {
+            display: grid;
+            align-content: center;
+            grid-template-columns:90% 10%
+        }
+        .header .subm {
+            display: grid;
+        }
+        .header .subm ul {
+            display: grid;
+            list-style: none;
+            grid-template-columns: 50% 30% 20%;
+        }
+        .subm ul li {
+            display: inline;
+        }
+        .subm ul li a {
+            font-size: 0.8em;
+            color: black;
+            text-decoration: none;
+        }
+        .header input {
+            border:2px solid #79A560;
+            padding: 15px 0;
+        }
+        .color {
+            background-color: #79A560;
+        }
+        .nav {
+            padding-left: 100px;
+            display: grid;
+            border-top: 1px solid rgb(196, 196, 196);
+            border-bottom: 1px solid rgb(196, 196, 196);
+            grid-template-columns: 570px 570px 600px;
+        }
+        .nav .li1 {
+            align-items: center;
+            justify-items: center;
+            justify-content: end;
+            display: grid;
+            grid-template-columns: repeat(8, 10%);
+            list-style: none;
+        }
+        .li1 li a {
+            text-decoration: none;
+            color: #03C75A;
+        }
+        .nav .li2 {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: repeat(8, 10%);
+            list-style: none;
+        }
+        .li2 li a {
+            text-decoration: none;
+            color: black;
+        }
+        .bigcontent {
+            /* position: absolute; */
+            display: grid;
+            grid-template-columns: 10% 80% 10%;
+        }
+        .content {
+            gap: 10px 0;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: 20% 8% 60%;
+        }
+        .canter {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+        }
+        .login {
+            margin-top: 5px;
+            padding: 0 15px;
+            background-color: rgb(247,249,250);
+            display: grid;
+            grid-template-rows: 20% 50% 30%;
+        }
+        .login a {
+            display: grid;
+            height: 80%;
+            text-decoration: none;
+            color: white;
+            background-color: #19CE60;
+        }
+        .login .top {
+            font-size: 0.7em;
+            display: grid;
+            align-items: end;
+        }
+        .login .but {
+            border-color: #19CE60;
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .login .bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            font-size: 0.9rem;
+            align-items: center;
+        }
+        .bottom .e {
+            display:grid ;
+            justify-items: end;
+        }
+        .align {
+            display: grid;
+            align-items: center;
+        }
+        .content .news {
+            display: grid;
+            grid-template-rows: 10% 90%;
+        }
+        .news .w {
+            padding-left: 10px;
+            margin: 0 48px;
+            display: grid;
+            align-items: center;
+            grid-template-columns: 45% 40% 5% 5% 5%;
+        }
+        .news .main {
+            margin: 0 48px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            border-bottom: 1px solid gray;
+            border-right: 1px solid gray;
+        }
+        .main div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px solid gray;
+            border-left: 1px solid gray;
+        }
+        h4 {
+            padding-right: 5px;
+            display: grid;
+            margin: 0;
+            justify-items: end;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="img">
+            <img src="../img/naver.jpg">
+            </div>
+            <div class="middle">
+                <input type="text" name="검색">
+                <input class="color" type="submit" value="검색" name="검색">
+            </div>
+            <div class="subm">
+                <ul>
+                    <li><a href="#">네이버를 시작페이지로</a></li>
+                    <li><a href="#">쥬니어네이버</a></li>
+                    <li><a href="#">해피빈</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav">
+            <ul class="li1">
+                <li><a href="#">메일</a></li>
+                <li><a href="#">카페</a></li>
+                <li><a href="#">블로그</a></li>
+                <li><a href="#">지식iN</a></li>
+                <li><a href="#">쇼핑</a></li>
+                <li><a href="#">쇼핑live</a></li>
+                <li><a href="#">Pay</a></li>
+                <li><a href="#">TV</a></li>
+            </ul>
+            <ul class="li2">
+                <li><a href="#">사전</a></li>
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">증권</a></li>
+                <li><a href="#">부동산</a></li>
+                <li><a href="#">지도</a></li>
+                <li><a href="#">VIBE</a></li>
+                <li><a href="#">도서</a></li>
+                <li><a href="#">웹툰</a></li>
+            </ul>
+        </div>
+        <div class="bigcontent">
+            <div></div>
+            <div class="content">
+                <div class="canter">
+                    <img style="width: 800px; " src="../img/삼성.jpg">
+                </div>
+                <div class="login">
+                    <div class="top">
+                        네이버를 더 안전하고 편리하게 이용하세요
+                    </div>
+                    <div class="align">
+                        <a href="#">
+                            <div class="but">
+                                <h4>NAVER</h4> <p>로그인</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="bottom">
+                        <div>아이디 비밀번호찾기</div>
+                        <div class="e">회원가입</div>
+                    </div>
+                </div>
+                <div class="canter">
+                    <img src="../img/연합뉴스.jpg">
+                </div>
+                <div class="canter">
+                    <img src="../img/로그인 밑.jpg">
+                </div>
+                <div class="news">
+                    <div class="w">
+                        <div>
+                            <b>뉴스스탠드</b> &gt; 구독한 언론사 &gt; <b>전체언론사</b>
+                        </div>
+                        <div></div>
+                        <div class="canter">a</div>
+                        <div class="canter">b</div>
+                        <div class="canter">c</div>
+                    </div>
+                    <div class="main">
+                        <div>MT머니투데이</div>
+                        <div>?</div>
+                        <div>경향신문</div>
+                        <div>sportalkorea</div>
+                        <div>이데일리</div>
+                        <div>Korea <br>joongAng Daily</div>
+                        <div>OSEN</div>
+                        <div>TBS</div>
+                        <div>아주경제</div>
+                        <div>Digital Today</div>
+                        <div>대한경제</div>
+                        <div>농민신문</div>
+                        <div>NEWS&JOY</div>
+                        <div>일요시사</div>
+                        <div>cnbNEWS</div>
+                        <div>TJB대전방송</div>
+                        <div>법률방송뉴스</div>
+                        <div>NextDaily</div>
+                        <div>컴퓨터월드</div>
+                        <div>이로운넷</div>
+                        <div>주간경향</div> 
+                        <div>미디어펜</div>
+                        <div>Ablenews</div>
+                        <div>이뉴스투데이</div>
+                    </div>
+                </div>
+                <div style="display: grid; justify-items: center;">
+                    <img src="../img/네이버 사진.jpg">
+                </div>
+            </div>
+            <div></div>
+        </div>
+            <div></div>
+    </div>
+</body>
+</html>
