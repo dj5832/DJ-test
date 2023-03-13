@@ -6,7 +6,7 @@ const str2 = "1";
 const str3 = "Smith"
 console.log(str1, typeof str1);
 
-// Number ** 숫자
+// Number ** 숫자      
 const num1 = 1;
 const num2 = 123124151;
 const num3 = 1.5;
