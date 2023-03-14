@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수 연습</title>
+</head>
+<body>
+    <div id="name"></div>
+
+    <script>
+        const userName = prompt("이름입력");
+        const color = prompt("컬러입력");
+        const divElement = document.querySelector("#name");
+        divElement.innerHTML = userName;
+        divElement.style.color = color;
+
+        const func1 = function(userName, color) {
+            const divElement = document.querySelector("#name");
+            divElement.innerHTML = userName;
+            divElement.style.color = color;
+        }
+    </script>
+</body>
+</html>

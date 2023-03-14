@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수 연습</title>
+</head>
+<body>
+    <input id="input" placeholder="이름을 적어주세요">
+    <button onclick="callback()">click</button>
+    <p id="greeting"></p>
+
+    <script>
+        const input = document.querySelector("#input") 
+        const greeting = document.querySelector("#greeting")
+
+        // const greet = function ()
+        let gree = []
+
+
+        const callback = function() {
+            const greet = input.value;
+            greeting.innerHTML = greet;
+            input.value = ""
+            gree.push(greeting.innerText)
+            console.log(gree)
+        }        
+
+    </script>
+    
+</body>
+</html>

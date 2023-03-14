@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수 연습</title>
+</head>
+<body>
+    <input id="input" placeholder="과일이름을 적어주세요">
+    <button onclick="callback()">click</button>
+    <p></p>
+
+    <script>
+        const func1 = function(x) {
+            return x * 2
+        }
+        
+        let value = 2;
+
+        value = func1(value)
+        console.log(value)
+
+        let value1 = 3
+        value1 = func1(value1)
+        console.log(value1)
+
+        const greet2 = function (uesrName) {
+        let returnValue = "Hello " + uesrName;
+        return returnValue;
+}
+        const greet2Return = greet2("smith");
+        console.log(greet2Return)
+        </script>
+    
+</body>
+</html>
