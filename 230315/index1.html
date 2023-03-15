@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>함수 연습</title>
+</head>
+<body>
+    <input id="input" placeholder="과일이름을 적어주세요">
+    <button onclick="callback()">click</button>
+    <div id="d"></div>
+    <h2></h2>
+    <script>
+        const fruits = [];
+        
+        const input = document.querySelector("#input");
+        const div = document.querySelector("div");
+        const h2 = document.querySelector("h2");
+
+        const callback = function() {
+            fruits.push(input.value);
+            console.log(fruits);
+            display(input.value, h2)
+            input.value = "";
+        }
+
+        const display = function (inputValue, tag) {
+            const pTag = document.createElement("p");
+            pTag.innerHTML = input.value;
+            tag.appendChild(pTag);
+            // document.querySelector("#d").innerHTML = fruits /* 배열을 강제로 태그안의 텍스트로 보여줌 */
+        }
+
+    </script>
+    
+</body>
+</html>
