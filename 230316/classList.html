@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <title>JS 연습</title>
+    <style>
+        .myStyle {
+            background-color: coral;
+            padding: 16px;
+        }
+
+        .button1 {
+            position: fixed;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <p>나는 DIV 입니다.</p>
+    </div>
+
+    <button id="btn1">클래스 추가</button>
+    <button id="btn2">클래스 삭제</button>
+    <button id="btn3" class="button1">Toggle 토글</button>
+    <script>
+        const div = document.querySelector("#myDiv");
+        const btn = document.querySelector("#btn1");
+        const btn2 = document.querySelector("#btn2");
+        const btn3 = document.querySelector("#btn3");
+
+        const callback = function(e) {
+            div.classList.add("myStyle");
+        };
+
+        const reset = function(e) {
+            div.classList.remove("myStyle");
+        };
+
+        const toggle = function(e) {
+            div.classList.toggle("myStyle");
+        };
+        btn.addEventListener("click", callback);
+        btn2.addEventListener("click", reset);
+        btn3.addEventListener("click", toggle);
+    </script>
+</body>
+</html>

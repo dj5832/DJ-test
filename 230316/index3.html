@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 연습</title>
+</head>
+<body>
+    <h2>Hello~~~~~~~~~~</h2>
+
+    <script>
+        const h2 = document.querySelector("h2");
+        const mouseEnter = function (e) {
+            h2.innerHTML = "mouse Enter.......";
+            h2.style.backgroundColor = "#eee";
+            h2.style.textAlign = "Center"
+        };
+
+        const mouseLeave = function (e) {
+            h2.innerHTML = "mouse Leave !";
+            h2.style.fontSize = "0.9em";
+            h2.style.textAlign = "end"
+        };
+
+        h2.addEventListener("mouseenter", mouseEnter);
+        h2.addEventListener("mouseleave", mouseLeave);
+
+    </script>
+</body>
+</html>

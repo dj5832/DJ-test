@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JS 연습</title>
+</head>
+<body>
+    <input type="text" id="name">
+
+
+    <script>
+        const inputTag = document.querySelector("#name")
+        const callback = function(e) {
+            console.log(e.target.value);
+            console.log(e)
+        };
+        inputTag.addEventListener("change", callback);
+
+
+
+
+    </script>
+</body>
+</html>

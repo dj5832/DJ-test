@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8"> 
+    <title>JS 연습</title>
+</head>
+<body>
+    <div></div>
+
+
+    <script>
+        const colors = ["red", "green", "blue"];
+        const div = document.querySelector("div");
+        
+        const color = function(e) {
+            const width = window.innerWidth;    // 브라우저 창의 가로길이
+            div.innerHTML = width
+            if (1500<width) {
+                document.body.style.backgroundColor = colors[0];
+            }
+            else if (800<width) {
+                document.body.style.backgroundColor = colors[1];
+            }
+            else {
+                document.body.style.backgroundColor = colors[2];
+            };
+        };
+
+        window.addEventListener("resize", color);
+
+    </script>
+
+
+</body>
+</html>
