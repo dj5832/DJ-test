@@ -12,7 +12,7 @@ function func1(e) {
     }
     else {
         navbar.classList.remove("sticky")
-        content.style.marginTop = 0
+        content.style.marginTop = 0;
         // content.classList.remove("topSpace")
     }
 }
