@@ -10,7 +10,6 @@ for (let i = 0; i < balloons.length; i++) {
     balloons[i].innerHTML = "POP!"
     if(!balloons[i].classList.contains("dd")) {
       counter = counter + 1;
-      console.log(balloons[i])
     }
     balloons[i].classList.add("dd")
     console.log(counter)
