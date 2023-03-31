@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>other method with jQuery</title>
+    <style>
+        div {
+            border: 3px solid lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="text">무궁화 꽃이 피었습니다.</p>
+    </div>
+    <p class="i">은주는 예쁘다~</p>
+    <div>
+        <p>사뿐히 즈려밟고 가시옵소서</p>
+    </div>
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+     $(document).ready(function(){
+        $('div p').on('click', function(){
+            $('div').append(
+                $('#text')
+                );
+            $('div p').next().css({color: 'red'})
+        });
+            $('div.aniDiv').animate({fontSize: "3em"}, 'fast');
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <a href="http://tjdaewoo.co.kr/">DW아카데미</a><br><br>
+    <a href="mailto:kjy.devops@gmail.com">kjy에게 메일보내기</a><br><br>
+    <div><label>Some images:</label></div>
+    <div>
+        <img src="img/f1.jpg" id="img1" alt="flower_1">
+        <img src="img/f2.jpg" id="img2" title="flower_2">
+        <img src="img/f3.jpg" id="img3" alt="flower_3">
+        <img src="img/d1.jpg" id="img4" title="dog_1">
+        <img src="img/d2.jpg" id="img5" alt="dog_2">
+        <img src="img/d3.jpg" id="img6" title="dog_3">
+        <img src="img/m1.png" alt="mountain_1">
+    </div>
+    <div id="someDiv">이곳은 ID속성이 <t>someDiv</t>인 &lt;div&gt;태그 입니다.</div>
+    <form>
+        <div>
+            <label>Text:</label><input type="text" id="aTextField" name="someTextField">
+        </div>
+        <button type="submit" id="submitButton">Submit</button>
+        <input type="button" id="changeBtn" value="클릭~~">
+    </form>
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#changeBtn').on('click', function(){
+                $('input[type="button"]').css('backgroundColor', 'yellow');
+                $('a[href*="mailto"]').css({
+                                            'backgroundColor': 'yellow'
+                                           ,'text-decoration': 'none'
+                                        });
+                $('img[id!="img1"]').css('border', '4px solid blue');
+                $('img[src*=2]').css('border', '4px solid yellow');
+                $('img[src$=".png"]').css('border', '4px solid red');
+            })
+        });
+    </script>
+</body>
+</html>
