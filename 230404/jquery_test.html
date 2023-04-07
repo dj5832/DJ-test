@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>other method with jQuery</title>
+    <style>
+        div {
+            border: 3px solid lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <p>무궁화 꽃이 피었습니다.</p>
+    </div>
+    <p>은주는 예쁘다~</p>
+    <p>은주는 예쁘다~</p>
+    <p>은주는 예쁘다~</p>
+    <div class="d2">
+        <p>사뿐히 즈려밟고 가시옵소서</p>
+    </div>
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+        // 내가한거
+    //  $(document).ready(function(){
+    //     $('div p').on('click', function(){
+    //         $(this).parent().append(
+    //             $(this).clone()
+    //             );
+    //         $('div p').next().css({color: 'red'})
+    //     });
+    //         $('.d2').prevUntil('.d1', 'p').on('click', function(){
+    //             alert("잘못된 접근입니다.")
+    //         });
+    // })
+
+    $(document).ready(function() {
+        $('div').on('click', 'p', function(){
+            let elem = $(this);
+            if('div' == elem.parent().prop('tagName').toLowerCase()){
+                let txt = elem.text()
+                // elem.parent().append(
+                //     $('<p>').prop({
+                //         innerHTML : txt,
+                //         style : 'color: red'
+                //     })
+                // )
+
+                // 두번째 방법
+                // elem.parent().append(
+                //     '<p style="color: red">' + txt + '</p>'
+                // )
+
+                elem.parent().append(elem.clone().css('color', 'red'));
+                
+            }else{
+                alert('작업대상이 아닙니다.')
+            }
+        })
+    })
+
+
+
+    </script>
+</body>
+</html>

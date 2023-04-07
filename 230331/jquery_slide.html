@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>other method with jQuery</title>
+    <style>
+        .navBar {
+            height: 150px;
+            background-color: lightblue;
+        }
+        .dtlNavBar {
+            height: 100px;
+            background-color: yellow;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navBar">메뉴 DIV</div>
+    <div class="dtlNavBar">세부 메뉴 DIV</div>
+    <script src="js/jquery-3.6.4.js"></script>
+    <script>
+     $(document).ready(function(){
+        $('.navBar').on('click', function(){
+        //     $('.dtlNavBar').slideDown('slow');
+        $('.dtlNavBar').slideToggle('fast');
+        })
+
+        $('.dtlNavBar').on('click', function(){
+            // $('.dtlNavBar').slideUp('slow');
+            $(this).slideUp('slow');    // this 대상이 자기자신일때 사용
+        })
+
+
+     })
+    </script>
+</body>
+</html>
